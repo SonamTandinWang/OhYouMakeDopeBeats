@@ -17,7 +17,7 @@ body {
 	margin: auto;
 }
 
-/*	BECAUSE COLUMN-1 IS SPECIAL ---- DO NOT FUCK WITH*/
+/*	BECAUSE COLUMN-1 IS SPECIAL ---- DO NOT FUCK WITH */
 
 #column-1 {
 	float: left;
@@ -38,7 +38,7 @@ body {
     font-style: oblique;
 }
 
-/*COLUMN AND APP SPACING + DESIGN --- DO NOT FUCK WITH */
+/* COLUMN AND APP SPACING + DESIGN --- DO NOT FUCK WITH */
 
 .columns {
         float: left;
@@ -55,13 +55,13 @@ body {
 }
 
 .measure-marker {
-	/*DONT FUCK WITH THE NEXT 2 LINES*/
+	/* DONT FUCK WITH THE NEXT 2 LINES */
 	float: left;
     position: relative;
     /*NOW YOU MAY*/
 }
 
-/*INDIVIDUAL MEASURES COLOR --- DO NOT FUCK WITH*/
+/* INDIVIDUAL MEASURES COLOR --- DO NOT FUCK WITH */
 
 #measure-1 {
 	background-color: rgba(0,0,0,0.2);
@@ -79,6 +79,24 @@ body {
 	background-color: rgba(0,0,0,0.5);
 }
 
+/* CLICKED */
+
+.clicked {
+		background-color: white;
+        height: 15px;
+        width: 15px;
+        border-radius: 20%;
+        border: 2px solid #d9d9d9;
+        margin: 2px;
+}
+
+.unclicked {
+        height: 15px;
+        width: 15px;
+        border-radius: 20%;
+        border: 2px solid #d9d9d9;
+        margin: 2px;
+}
 
 
 
