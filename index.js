@@ -4,7 +4,7 @@ var express = require('express')
 app.use(express.static('public'));
 
 app.listen(3000, function() {
-	console.log("server is gucciiii")
+	console.log("-- Nodemon Is Running --")
 })
 
 app.get('/', function (req, res){
