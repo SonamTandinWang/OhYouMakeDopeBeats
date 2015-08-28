@@ -17,15 +17,31 @@ body {
 	margin: auto;
 }
 
+#play-button {
+	color: black;
+	font-style: italic;
+	background-color: white;
+	font: sans-serif;
+    position: relative;
+    top: 17px;
+    margin-left: 50%;
+	height: 20px;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: 16px;
+}
+
 /*	BECAUSE COLUMN-1 IS SPECIAL ---- DO NOT FUCK WITH */
 
-#column-1 {
+#column-00 {
 	float: left;
     position: relative;
     top: 6%;
 }
 
-#column-1 div {
+#column-00 div {
 	height: 15px;
 	width: 70px;
 	padding: 2px;
