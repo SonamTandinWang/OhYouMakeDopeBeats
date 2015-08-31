@@ -1,3 +1,5 @@
+"use strict";
+
 // ------------CLICK EVENT TO CHANGE CLASS OF DIV--------------
 $('.columns').on('click', '.unclicked', function() {
 	if ($(this).attr('class') === 'unclicked') {
@@ -42,28 +44,38 @@ $('#container-for-app').on('click', 'div', function() {
 
 	if (regexHats.test($(this).attr('id'))) {
 		hats1.play();
-		// console.log('row ', row);
-		// console.log('column', column);
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(hats1);
 	}
 	else if (regexCymbal.test($(this).attr('id'))) {
 		cymbals1.play();
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(cymbals1);
 	}
 	else if ($(this).attr('id').search(regexSnare) > -1) {
 		snare1.play()
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(snare1);
 	}
 	else if ($(this).attr('id').search(regexKick) > -1) {
 		kick1.play()
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(kick1);
 	}
 	else if ($(this).attr('id').search(regexRim) > -1) {
 		rim1.play()
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(rim1);
 	}
 	else if ($(this).attr('id').search(regexPerc) > -1) {
 		perc1.play()
+		console.log('row ', row);
+		console.log('column', column);
 		matrix[column][row].push(perc1);
 	};
 });
@@ -72,13 +84,16 @@ $('#container-for-app').on('click', 'div', function() {
 
 $('#play-button').on('click', function () {
 
-	for (var i = 0; i < 64; i++ ) {
-		for (var j = 0; j < 5; j++) {
-		 	if (matrix[i][j].length > 0) {
-		 		// BELOW LINE IS NESTED INSIDE A SET TIMEOUT FUNCTION WHICH MAY REQUIRE CLOSURE
-		 		matrix[i][j][0].play();
-		 	}
-	 	}
+	for (var i = 0; i < 64; i++){
+	    for (var j = 0; j < 5; j++){
+	        let m = i;
+	        let n = j;
+	        setInterval(function(){
+	            if (matrix[m][n].length > 0){
+	                matrix[m][n][0].play();
+	            }
+	        }, 1000);
+	    }
 	}
 });
 
